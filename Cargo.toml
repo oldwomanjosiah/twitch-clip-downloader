@@ -13,7 +13,7 @@ license = "GPL-3.0-or-later"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-twitch-api-rs = { version = "0.1", path = "../twitch-api" }
+twitch-api-rs = { version = "0.1", path = "../twitch-api-rs" }
 serde = { version = "1", features = [ "derive" ] }
 serde_json = "1"
 reqwest = { version = "0.10", features = [ "json", "rustls-tls", "trust-dns" ] }
