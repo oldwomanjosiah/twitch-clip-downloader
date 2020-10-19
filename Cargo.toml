@@ -8,6 +8,7 @@ keywords = ["twitch"]
 categories = ["command-line-utilities"]
 repository = "https://github.com/oldwomanjosiah/twitch-clip-downloader"
 readme = "readme.md"
+license = "GPL-3.0-or-later"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
