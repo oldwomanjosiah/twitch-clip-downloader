@@ -116,12 +116,12 @@ pub async fn update_auth(
 }
 
 pub async fn get_clip_info(
-    user: String,
+    _user: String,
     client: &Client,
     spinner_style: indicatif::ProgressStyle,
     headers: HeaderMap,
 ) -> clip_download::Clips {
-    let mut bar = indicatif::ProgressBar::new_spinner().with_style(spinner_style);
+    let bar = indicatif::ProgressBar::new_spinner().with_style(spinner_style);
     bar.set_message("Retrieving Clips");
     bar.enable_steady_tick(50);
 
@@ -179,7 +179,7 @@ async fn download_clips(
         .create(&location)
         .expect("Could not create download dir");
 
-    let mut bar = indicatif::ProgressBar::new(clips.clips.len() as u64).with_style(bar_style);
+    let bar = indicatif::ProgressBar::new(clips.clips.len() as u64).with_style(bar_style);
     bar.set_message("Dowloading Clips");
     bar.tick();
     bar.enable_steady_tick(50);

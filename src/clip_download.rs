@@ -1,9 +1,9 @@
-use crate::Config;
-use crate::State;
+
+
 use log::*;
 use reqwest::{header::HeaderMap, Client};
 use serde::{Deserialize, Serialize};
-use std::io::{BufWriter, Write};
+use std::io::{Write};
 use std::path::PathBuf;
 use tokio::prelude::*;
 use twitch_api_rs::request::get_clips::ClipsResponseItem;
