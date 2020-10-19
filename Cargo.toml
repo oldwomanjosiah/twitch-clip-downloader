@@ -1,0 +1,26 @@
+[package]
+name = "twitch-clip-downloader"
+description = "A command line utility to download all the clips from a specified channel"
+version = "0.1.0"
+authors = ["Josiah Hilden <jhilden13@gmail.com>"]
+edition = "2018"
+keywords = ["twitch"]
+categories = ["command-line-utilities"]
+repository = "https://github.com/oldwomanjosiah/twitch-clip-downloader"
+readme = "readme.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+twitch-api-rs = { version = "0.1", path = "../twitch-api" }
+serde = { version = "1", features = [ "derive" ] }
+serde_json = "1"
+reqwest = { version = "0.10", features = [ "json", "rustls-tls", "trust-dns" ] }
+tokio = { version = "0.2", features = [ "full" ] }
+time = { version = "0.2", default-features = false, features = [ "std", "serde" ] }
+structopt = "0.3"
+pretty_env_logger = "0.4"
+log = "0.4"
+indicatif = { version = "0.15", features = [ "rayon" ] }
+rayon = "1.4"
+regex = "1.4"
